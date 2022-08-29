@@ -8,6 +8,11 @@ export class Welcome extends React.Component{
                     ? <p>Ciao, {this.props.name}</p>
                     : <p>Ciao, Sconosciuto</p>
                 }
+                {
+                    this.props.age
+                    ? <p>you have {this.props.age} age</p>
+                    : <p>Your age is ?</p>
+                }
             </div>
         ) 
     }

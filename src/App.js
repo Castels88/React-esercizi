@@ -10,7 +10,7 @@ render(){
         <HelloWorld/>
         <h1>Hello <Name/></h1>
         <h2>{sum(2,3)}</h2>
-        <Welcome name=""/>  
+        <Welcome name="" age={33}/>  
     </div>
     )
 }
