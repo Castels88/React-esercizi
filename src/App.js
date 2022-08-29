@@ -7,7 +7,14 @@ render(){
     <div>
         <HelloWorld/>
         <h1>Hello <Name/></h1>
+        <h2>{sum(2,3)}</h2>
+
     </div>
     )
 }
 }
+
+function sum(a,b){
+    return a + b;
+}
+sum(2,3)
