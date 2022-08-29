@@ -1,4 +1,5 @@
 import React from "react";
+import { Counter } from "./Counter";
 import { HelloWorld } from "./Helloworld";
 import { Message } from "./Message";
 import { Name } from "./Name";
@@ -11,6 +12,7 @@ render(){
         <h1>Hello <Name/></h1>
         <h2>{sum(2,3)}</h2>
         <Welcome name="" age={33}/>  
+        <Counter/>
     </div>
     )
 }
