@@ -2,7 +2,8 @@ import React from "react";
 export class Age extends React.Component{
     
     render(){
-        return <div>your age is {this.props.age} ?
+        return <div>
+            your age is {this.props.age} ?
         </div>
     }
 }

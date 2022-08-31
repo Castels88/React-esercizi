@@ -12,7 +12,7 @@ render(){
         <HelloWorld/>
         <h1>Hello <Name/></h1>
         <h2>{sum(2,3)}</h2>
-        <Welcome name="Elio" age={20}/>
+        <Welcome name="Elio" />
         <Counter InitialValue={0} IncrementValue={1}/>
         <SecondCounter NumeroIniziale={-1}/>  
     </div>
