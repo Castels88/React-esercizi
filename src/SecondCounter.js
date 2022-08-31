@@ -19,7 +19,7 @@ export class SecondCounter extends React.Component{
     
     
     render(){
-        return <h3>{this.state.count}</h3>
+        return <h3>{this.state.count} secondo counter</h3>
     }
 }
 
