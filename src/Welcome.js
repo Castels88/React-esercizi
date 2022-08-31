@@ -10,8 +10,11 @@ export class Welcome extends React.Component{
                     : <p>Ciao, Sconosciuto</p>
                     
                 }
+                {
+                    this.props.age > 18 && <Age age={ this.props.age}/>
+                    
+                }
                 
-                <Age age=" 33"/>
 
             </div>
         ) 
@@ -26,3 +29,7 @@ export class Welcome extends React.Component{
 // What happens if the name prop is a JSX expression instead of a string? 
 // How do you pass a prop that contains a JSX expression? 
 // Modify the value passed to the name prop so that it's contained within a strong tag.
+
+// Conditional Rendering - 01
+// Modify the Welcome component so that 
+// the Age component is rendered only if the age prop is greater than 18.

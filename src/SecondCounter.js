@@ -12,7 +12,7 @@ export class SecondCounter extends React.Component{
         },500)
     }
     componentDidUpdate(){
-        if(this.state.count == 10){
+        if(this.state.count === 10){
             this.state.count = this.props.NumeroIniziale
         }
     }
