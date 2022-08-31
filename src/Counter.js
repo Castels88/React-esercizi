@@ -1,19 +1,18 @@
 import React from "react";
 export class Counter extends React.Component{
-    state = {
-        count : this.props.InitialValue ?? 0
-    }
     constructor(props){
         super(props)
+        this.state = {count: this.props.InitialValue};
         setInterval(()=>{
-            this.setState(()=>{
-                return{
-                    count : this.state.count + 1                    
-                }
-            })
-            
-        },1000)
+            this.setState((state)=>({
+                count: state.count + this.props.IncrementValue
+            }))
+            if(this.state.count == 10 ){
+                this.state.count = 1
+            }
+        },500)
     }
+    
     
     
     render(){
