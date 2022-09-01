@@ -1,5 +1,7 @@
 import React, { Fragment } from "react";
 import { Counter } from "./Counter";
+import { CounterDisplay } from "./CounterDisplay";
+import { CounterLifeCycling } from "./CounterLifecycling";
 import { HelloWorld } from "./Helloworld";
 import { Message } from "./Message";
 import { Name } from "./Name";
@@ -17,6 +19,8 @@ render(){
         <Counter InitialValue={0} IncrementValue={1}/>
         <SecondCounter NumeroIniziale={0}/>
         <ThirdCounter NumeroIniziale={1} IncrementValue={1} Timeout={500} />  
+        <CounterDisplay NumeroIniziale={1} IncrementValue={1} Timeout={500}/>
+        <CounterLifeCycling NumeroIniziale={1} IncrementValue={1} Timeout={500}/>
     </div>
     )
 }

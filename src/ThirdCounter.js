@@ -14,7 +14,7 @@ export class ThirdCounter extends React.Component{
     },this.props.Timeout)
     }
     render(){
-        return <h1>{this.state.count} esercizio State 01 </h1>
+        return <h1>{this.state.count} esercizio State</h1>
     }
 }
 

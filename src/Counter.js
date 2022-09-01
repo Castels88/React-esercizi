@@ -7,7 +7,7 @@ export class Counter extends React.Component{
             this.setState((state)=>({
                 count: state.count + this.props.IncrementValue
             }))
-            if(this.state.count == 10 ){
+            if(this.state.count === 10 ){
                 this.state.count = 1
             }
         },500)
