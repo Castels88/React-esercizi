@@ -4,6 +4,7 @@ import { HelloWorld } from "./Helloworld";
 import { Message } from "./Message";
 import { Name } from "./Name";
 import { SecondCounter } from "./SecondCounter";
+import { ThirdCounter } from "./ThirdCounter";
 import { Welcome } from "./Welcome";
 export class App extends React.Component{
 render(){
@@ -14,7 +15,8 @@ render(){
         <h2>{sum(2,3)}</h2>
         <Welcome name="John" age={17}/>
         <Counter InitialValue={0} IncrementValue={1}/>
-        <SecondCounter NumeroIniziale={0}/>  
+        <SecondCounter NumeroIniziale={0}/>
+        <ThirdCounter count={1} />  
     </div>
     )
 }
