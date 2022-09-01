@@ -16,7 +16,7 @@ render(){
         <Welcome name="John" age={17}/>
         <Counter InitialValue={0} IncrementValue={1}/>
         <SecondCounter NumeroIniziale={0}/>
-        <ThirdCounter count={1} />  
+        <ThirdCounter NumeroIniziale={1} IncrementValue={1} Timeout={500} />  
     </div>
     )
 }
