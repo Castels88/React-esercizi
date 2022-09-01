@@ -24,15 +24,16 @@ export class Welcome extends React.Component{
                     this.props.age <= 65 && <Age age={this.props.age}/>
                 } */}
                 {
+                    this.props.name === "John"?
+                    <p>Benvenuto , {this.props.name}</p>:
+                    <p>Ciao, Sconosciuto</p>               
+                }
+                {
                     this.props.age>18?
                     <p>your age is {this.props.age}</p>:
                     <p>your are very young !!!!!</p>
                 }
-                {
-                    this.props.name === "John"?
-                    <p>Benvenuto , {this.props.name}</p>:
-                    <p>Ciao, Sconosciuto</p>               
-                    }
+                
             </div>
         ) 
     }
