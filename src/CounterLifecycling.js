@@ -1,11 +1,6 @@
 import React from "react";
 export class CounterLifeCycling extends React.Component{
-    
-
     state = {count : this.props.NumeroIniziale }
-    
-    
-
     componentDidMount(){
         this._interval= setInterval(()=>{
             this.setState((state)=>{
@@ -15,6 +10,15 @@ export class CounterLifeCycling extends React.Component{
             })
         },this.props.Timeout)
     }
+    componentWillUnmount(){
+        clearInterval(this._interval)
+    }
+    componentDidUpdate(){
+        if(this.state.count === 10){
+            this.state.count = this.props.IncrementValue
+        }
+    }
+    
     render(){
         return <h1>{this.state.count} life cycling</h1>
     }
