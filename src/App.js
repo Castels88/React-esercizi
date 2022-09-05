@@ -1,5 +1,6 @@
 import React, { Fragment } from "react";
 import { Button } from "./Button";
+import { ClickTracker } from "./Clicktracker";
 import { Counter } from "./Counter";
 import { CounterButton } from "./CounterButton";
 import { CounterDisplay } from "./CounterDisplay";
@@ -25,6 +26,7 @@ render(){
         <CounterLifeCycling NumeroIniziale={1} IncrementValue={1} Timeout={250}/>
         <Button InizialNUmber={1} />
         <CounterButton/>
+        <ClickTracker/>
     </div>
     )
 }
