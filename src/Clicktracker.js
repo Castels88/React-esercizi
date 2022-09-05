@@ -8,10 +8,10 @@ export class ClickTracker extends React.Component{
     }
     
     handleButton = (event) => {
-        console.log(event.target.innerText)
+        console.log(event.target.alt)
         this.setState(()=>{
             return{
-                TrackEvent: event.target.innerText
+                TrackEvent: event.target.alt
             }
         })
     }
@@ -22,13 +22,13 @@ export class ClickTracker extends React.Component{
         return(
             <div>
                 <button name="PrimoBTN" onClick={this.handleButton}>
-                <img src={arrow_up} alt="freccia su" />
+                <img src={arrow_up} alt="freccia su" width={"58px"}/>
                 </button>
                 <button name="SecondoBTN" onClick={this.handleButton}>
-                <img src={arrow_right} alt="" />
+                <img src={arrow_right} alt="freccia destra" width={"58px"}/>
                 </button>
                 <button name="TerzoBTN" onClick={this.handleButton}>
-                <img src={arrow_left} alt="" />
+                <img src={arrow_left} alt="freccia sinistra" width={"58px"} />
                 </button>
                 <h1>{this.state.TrackEvent}</h1>
             </div>
