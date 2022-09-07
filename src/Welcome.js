@@ -4,12 +4,12 @@ export class Welcome extends React.Component{
     render(){
         return(
             <div>
-                {/* {
+                {
                     this.props.name
                     ? <p><strong>Ciao, {this.props.name}</strong></p>
                     : <p>Ciao, Sconosciuto</p>
                     
-                } */}
+                }
                 {/* {
                     this.props.age > 18 && <Age age={ this.props.age}/>
                     
@@ -23,11 +23,11 @@ export class Welcome extends React.Component{
                     this.props.age >= 18 && <Age age={this.props.age}/>:
                     this.props.age <= 65 && <Age age={this.props.age}/>
                 } */}
-                {
+                {/* {
                     this.props.name === "John"?
                     <p>Benvenuto , {this.props.name}</p>:
                     <p>Ciao, Sconosciuto</p>               
-                }
+                } */}
                 {
                     this.props.age>18?
                     <p>your age is {this.props.age}</p>:
