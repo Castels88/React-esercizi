@@ -9,6 +9,7 @@ import { Message } from "./Message";
 import { Name } from "./Name";
 import { SecondCounter } from "./SecondCounter";
 import { ThirdCounter } from "./ThirdCounter";
+import { UncontrolledLogin } from "./UncontrolledLogin";
 import { Welcome } from "./Welcome";
 export class App extends React.Component{
 render(){
@@ -25,6 +26,7 @@ render(){
         <CounterLifeCycling NumeroIniziale={1} IncrementValue={1} Timeout={500}/>
         <InteractiveWelcome/>
         <Login/>
+        <UncontrolledLogin/>
     </div>
     )
 }
