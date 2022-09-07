@@ -4,6 +4,7 @@ import { CounterDisplay } from "./CounterDisplay";
 import { CounterLifeCycling } from "./CounterLifecycling";
 import { HelloWorld } from "./Helloworld";
 import { InteractiveWelcome } from "./InteractiveWelcome";
+import { Login } from "./Login";
 import { Message } from "./Message";
 import { Name } from "./Name";
 import { SecondCounter } from "./SecondCounter";
@@ -23,6 +24,7 @@ render(){
         <CounterDisplay NumeroIniziale={1} IncrementValue={1} Timeout={500}/>
         <CounterLifeCycling NumeroIniziale={1} IncrementValue={1} Timeout={500}/>
         <InteractiveWelcome/>
+        <Login/>
     </div>
     )
 }
