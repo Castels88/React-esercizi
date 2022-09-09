@@ -12,6 +12,12 @@ import { SecondCounter } from "./SecondCounter";
 import { ThirdCounter } from "./ThirdCounter";
 import { UncontrolledLogin } from "./UncontrolledLogin";
 import { Welcome } from "./Welcome";
+const items = [
+    {id: 1, name: "Blu"},
+    {id: 2, name: "Yellow"},
+    {id: 3, name: "Green"},
+    {id: 4, name: "Black"},
+]
 export class App extends React.Component{
 render(){
     return (
@@ -28,7 +34,7 @@ render(){
         <InteractiveWelcome/>
         <Login/>
         <UncontrolledLogin/>
-        <Colors items={["blu","yellow","green","black"]} />
+        <Colors items={items} />
     </div>
     )
 }
