@@ -1,4 +1,5 @@
 import React, { Fragment } from "react";
+import { Colors } from "./Colors";
 import { Counter } from "./Counter";
 import { CounterDisplay } from "./CounterDisplay";
 import { CounterLifeCycling } from "./CounterLifecycling";
@@ -27,6 +28,7 @@ render(){
         <InteractiveWelcome/>
         <Login/>
         <UncontrolledLogin/>
+        <Colors items={["blu","yellow","green","black"]} />
     </div>
     )
 }
