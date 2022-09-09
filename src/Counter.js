@@ -16,6 +16,12 @@ export class Counter extends React.Component{
     
     
     render(){
-        return <div>{this.state.count}</div>
+        const CountStyle = {
+            backgroundColor: "beige",
+            color:"red",
+            padding: "20px",
+            width: "10px",
+        }
+        return <div style={CountStyle} >{this.state.count}</div>
     }
 }
