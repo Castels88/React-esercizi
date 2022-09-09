@@ -19,8 +19,9 @@ export class Counter extends React.Component{
         const CountStyle = {
             backgroundColor: "beige",
             color:"red",
-            padding: "20px",
-            width: "10px",
+            width: "20px",
+            alignContent: "center"
+            
         }
         return <div style={CountStyle} >{this.state.count}</div>
     }

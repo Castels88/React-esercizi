@@ -28,8 +28,8 @@ render(){
         <h2>{sum(2,3)}</h2>
         <Welcome name="John" age={17}/>
         <Counter InitialValue={0} IncrementValue={1}/>
-        <SecondCounter NumeroIniziale={0}/>
-        <ThirdCounter NumeroIniziale={1} IncrementValue={1} Timeout={500} />  
+        {/* <SecondCounter NumeroIniziale={0}/> */}
+        {/* <ThirdCounter NumeroIniziale={1} IncrementValue={1} Timeout={500} />   */}
         <CounterDisplay NumeroIniziale={1} IncrementValue={1} Timeout={500}/>
         <CounterLifeCycling NumeroIniziale={1} IncrementValue={1} Timeout={500}/>
         <ClickCounter InitialValue={0}/>
