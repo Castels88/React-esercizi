@@ -1,5 +1,5 @@
-import react from "react"
-export class Colors extends react.Component{
+import React from "react"
+export class Colors extends React.Component{
     render(){
         return (
             <div>
