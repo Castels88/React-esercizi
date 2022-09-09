@@ -1,6 +1,6 @@
+import React from "react"
 import { Welcome } from "./Welcome"
-import react from "react"
-export class InteractiveWelcome extends react.Component{
+export class InteractiveWelcome extends React.Component{
     state = {
         username:""
     }
