@@ -26,13 +26,13 @@ export class Login extends React.Component{
     }
     render(){
         return(
-            <div>
-                <h3>Controlled component</h3>
-                <input type="text" name="username" value={this.state.username} onChange={this.HandleInputChange} />
-                <input type="password" name="password" value={this.state.password} onChange={this.HandleInputChange}/>
-                <input type="checkbox" name="remember" checked={this.state.remember} onChange={this.HandleInputChange}/>
-                <button disabled={!this.state.username||!this.state.password} onClick={this.Onlogin}>Login</button>
-                <button onClick={this.ResetState} >Reset</button>
+            <div className="flex flex-col">
+                <h3 className="my-3">Controlled component</h3>
+                <input className="border border-black, w-64" type="text" name="username" value={this.state.username} onChange={this.HandleInputChange} />
+                <input className="border border-black, w-64" type="password" name="password" value={this.state.password} onChange={this.HandleInputChange}/>
+                <input className="border border-black, w-64" type="checkbox" name="remember" checked={this.state.remember} onChange={this.HandleInputChange}/>
+                <button className="border border-black, p-1, bg-sky-500 hover:bg-sky-700, w-24 " disabled={!this.state.username||!this.state.password} onClick={this.Onlogin}>Login</button>
+                <button className="border border-black, p-1, bg-sky-500 hover:bg-sky-700, w-24" onClick={this.ResetState} >Reset</button>
             </div>
         )
     }

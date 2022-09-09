@@ -18,12 +18,12 @@ export class UncontrolledLogin extends React.Component{
         return (
             <div>
                 <h3>Uncontrolled Login</h3>
-                <form onSubmit={this.handleFormLogin}>
-                    <input autoFocus type="text" name="username" />
-                    <input type="password" name="password" />
-                    <input type="checkbox" name="remember" />
-                    <button type="submit">Login</button>
-                    <button type="reset">Reset</button>
+                <form className="flex flex-col" onSubmit={this.handleFormLogin}>
+                    <input className="border border-black, w-64" autoFocus type="text" name="username" />
+                    <input className="border border-black, w-64" type="password" name="password" />
+                    <input className="border border-black" type="checkbox" name="remember" />
+                    <button className="border border-black, p-1, bg-sky-500 hover:bg-sky-700, w-24" type="submit">Login</button>
+                    <button className="border border-black, p-1, bg-sky-500 hover:bg-sky-700, w-24 " type="reset">Reset</button>
                 </form>
             </div>
         )

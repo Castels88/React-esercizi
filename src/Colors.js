@@ -2,9 +2,9 @@ import React from "react"
 export class Colors extends React.Component{
     render(){
         return (
-            <div>
+            <div className="border-solid border-2 border-black, my-5">
                 <ul>
-                    {this.props.items.map((items) => <li key={items.id}>
+                    {this.props.items.map((items) => <li className="text-green-600" key={items.id}>
                         <h4>{items.name}</h4>
                     </li> )}
                 </ul>
