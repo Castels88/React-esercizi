@@ -29,7 +29,7 @@ const items = [
 export class App extends React.Component{
 render(){
     return (
-    <div className="container mx-auto">
+    <div className="container">
         <HelloWorld/>
         <h1>Hello <Name/></h1>
         <h2>{sum(2,3)}</h2>

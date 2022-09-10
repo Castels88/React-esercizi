@@ -1,4 +1,6 @@
 import React from "react"
+import Card from 'react-bootstrap/Card';
+import Button from 'react-bootstrap/Button';
 export class TodoList extends React.Component{
     state={
         todo: "",
@@ -19,7 +21,7 @@ export class TodoList extends React.Component{
     }
     render(){
         return(
-            <div>
+            <Card border="primary">
                 <ul>
                     {
                         this.props.items.map(item=> <li key={item.id}>
@@ -34,9 +36,9 @@ export class TodoList extends React.Component{
                 </ul>
                 <form onSubmit={this.addNewItems}>
                     <input name="todo" type="text" value={this.state.todo} onChange={this.handleInputChange} />
-                    <button type="submit">Submit</button>
+                    <Button type="submit">Submit</Button>
                 </form>
-            </div>
+            </Card>
         )
     }
 }
