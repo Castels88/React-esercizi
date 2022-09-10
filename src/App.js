@@ -11,13 +11,20 @@ import { Message } from "./Message";
 import { Name } from "./Name";
 import { SecondCounter } from "./SecondCounter";
 import { ThirdCounter } from "./ThirdCounter";
+import { TodoList } from "./TodoList";
 import { UncontrolledLogin } from "./UncontrolledLogin";
 import { Welcome } from "./Welcome";
-const items = [
+const todo = [
     {id: 1, name: "Blu"},
     {id: 2, name: "Yellow"},
     {id: 3, name: "Green"},
     {id: 4, name: "Black"},
+]
+const items = [
+    {id:1 , name: "fare la spesa"},
+    {id:2 , name: "pulire casa"},
+    {id:3 , name: "buttare la spazzatura"},
+    {id:4 , name: "studiare e fare esercizi"},
 ]
 export class App extends React.Component{
 render(){
@@ -36,7 +43,8 @@ render(){
         <InteractiveWelcome/>
         <Login/>
         <UncontrolledLogin/>
-        <Colors items={items} />
+        <Colors todo={todo} />
+        <TodoList items={items}/>
     </div>
     )
 }

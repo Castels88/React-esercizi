@@ -4,8 +4,8 @@ export class Colors extends React.Component{
         return (
             <div className="border-solid border-2 border-black, my-5">
                 <ul>
-                    {this.props.items.map((items) => <li className="text-green-600" key={items.id}>
-                        <h4>{items.name}</h4>
+                    {this.props.todo.map((todo) => <li className="text-green-600" key={todo.id}>
+                        <h4>{todo.name}</h4>
                     </li> )}
                 </ul>
             </div>
