@@ -3,7 +3,7 @@ import { Age } from "./Age"
 export class Welcome extends React.Component{
     render(){
         return(
-            <div>
+            <div className="welcome_container" >
                 {
                     this.props.name
                     ? <p><strong>Ciao, {this.props.name}</strong></p>
