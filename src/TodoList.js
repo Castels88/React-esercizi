@@ -20,6 +20,12 @@ export class TodoList extends React.Component{
         this.setState({todo:""})
         event.preventDefault()
     }
+    resetState= ()=>{
+        this.setState({
+            todo: "",
+            item:[],
+        })
+    }
     render(){
         return(
             <Card border="primary">
@@ -39,11 +45,12 @@ export class TodoList extends React.Component{
                 <form onSubmit={this.addNewItems}>
                     <input name="todo" type="text" value={this.state.todo} onChange={this.handleInputChange} />
                     <Button type="submit">Submit</Button>
+                    <Button type="reset" onClick={this.resetState}>Reset</Button>
                 </form>
             </Card>
         )
     }
 }
 
-// Lists - 04
-// Modify the TodoList component so that the input clears every time a Todo is added to the items array.
+// Lists - 05
+// Modify the TodoList by adding a "reset" button that clears the items array when clicked.
