@@ -26,6 +26,13 @@ export class TodoList extends React.Component{
             item:[],
         })
     }
+    removeItems = (e) => {
+        this.setState(state => {
+            const newItem = [...state.item];
+            newItem.splice(e.target.value, 1);
+            return { item: newItem };
+        })
+    }
     render(){
         return(
             <Card border="primary">
@@ -46,11 +53,13 @@ export class TodoList extends React.Component{
                     <input name="todo" type="text" value={this.state.todo} onChange={this.handleInputChange} />
                     <Button type="submit">Submit</Button>
                     <Button type="reset" onClick={this.resetState}>Reset</Button>
+                    <Button onClick={this.removeItems}>Remove</Button>
                 </form>
             </Card>
         )
     }
 }
 
-// Lists - 05
-// Modify the TodoList by adding a "reset" button that clears the items array when clicked.
+// Lists - 06
+// Modify the TodoList by adding a "remove" button to each li tag. When clicked, 
+// the event handler should remove corresponding item from the items array.
