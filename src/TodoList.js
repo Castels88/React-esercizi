@@ -22,6 +22,7 @@ export class TodoList extends React.Component{
     render(){
         return(
             <Card border="primary">
+                <h3>Todo List</h3>
                 <ul>
                     {
                         this.props.items.map(item=> <li key={item.id}>
