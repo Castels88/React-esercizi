@@ -16,6 +16,13 @@ export class DisplayLanguage extends React.Component{
                     <option value="en">English</option>
                     <option value="it">Italian</option>
                 </select>
+                <LanguageContext.Consumer>
+                    {()=>{
+                        return(
+                            <h1>{this.state.language}</h1>
+                        )
+                    }}
+                </LanguageContext.Consumer>
             </div>    
         )
     }
