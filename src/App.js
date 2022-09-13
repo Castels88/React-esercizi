@@ -45,11 +45,12 @@ render(){
         <Login/>
         <UncontrolledLogin/>
         <Colors todo={todo} />
-        <TodoList items={items} render={(item)=>{
-            return(
-                <div>{item}</div>
-            )
-        }}>
+        <TodoList items={items}>
+            {(item)=>{
+                return(
+                    <div>{item}</div>
+                )
+            }}
         </TodoList>
     </Container>
     )

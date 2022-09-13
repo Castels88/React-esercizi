@@ -43,7 +43,7 @@ export class TodoList extends React.Component{
                             {item.name}
                         </li> )   
                     }
-                    {this.props.render(this.state.item.map((subItems, sIndex)=>(<li key={subItems + sIndex}>
+                    {this.props.children(this.state.item.map((subItems, sIndex)=>(<li key={subItems + sIndex}>
                             {subItems}
                         </li>)))}
                 </ul>
