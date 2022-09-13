@@ -30,7 +30,7 @@ const items = [
 export class App extends React.Component{
 render(){
     return (
-    <Container>
+    <Container title={"La mia App"}>
         <HelloWorld/>
         <h1>Hello <Name/></h1>
         <h2>{sum(2,3)}</h2>
