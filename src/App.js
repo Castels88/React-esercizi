@@ -5,8 +5,10 @@ import { Container } from "./Container";
 import { Counter } from "./Counter";
 import { CounterDisplay } from "./CounterDisplay";
 import { CounterLifeCycling } from "./CounterLifecycling";
+import { DisplayLanguage } from "./DisplayLanguage";
 import { HelloWorld } from "./Helloworld";
 import { InteractiveWelcome } from "./InteractiveWelcome";
+import { LanguageContext } from "./LanguageContext ";
 import { Login } from "./Login";
 import { Message } from "./Message";
 import { Name } from "./Name";
@@ -31,6 +33,9 @@ export class App extends React.Component{
 render(){
     return (
     <Container title={"La mia App"}>
+        <LanguageContext.Provider>
+            <DisplayLanguage/>
+        </LanguageContext.Provider>
         <HelloWorld/>
         <h1>Hello <Name/></h1>
         <h2>{sum(2,3)}</h2>
