@@ -1,6 +1,7 @@
 import React, { Fragment } from "react";
 import { ClickCounter } from "./ClickCounter";
 import { Colors } from "./Colors";
+import { Container } from "./Container";
 import { Counter } from "./Counter";
 import { CounterDisplay } from "./CounterDisplay";
 import { CounterLifeCycling } from "./CounterLifecycling";
@@ -29,7 +30,7 @@ const items = [
 export class App extends React.Component{
 render(){
     return (
-    <div className="container">
+    <Container>
         <HelloWorld/>
         <h1>Hello <Name/></h1>
         <h2>{sum(2,3)}</h2>
@@ -45,7 +46,7 @@ render(){
         <UncontrolledLogin/>
         <Colors todo={todo} />
         <TodoList items={items}/>
-    </div>
+    </Container>
     )
 }
 }
