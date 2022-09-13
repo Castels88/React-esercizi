@@ -43,11 +43,9 @@ export class TodoList extends React.Component{
                             {item.name}
                         </li> )   
                     }
-                    {
-                        this.state.item.map((subItems, sIndex)=>(<li key={subItems + sIndex}>
+                    {this.props.render(this.state.item.map((subItems, sIndex)=>(<li key={subItems + sIndex}>
                             {subItems}
-                        </li>))
-                    }
+                        </li>)))}
                 </ul>
                 <form onSubmit={this.addNewItems}>
                     <input name="todo" type="text" value={this.state.todo} onChange={this.handleInputChange} />
