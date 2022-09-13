@@ -48,8 +48,7 @@ render(){
         <TodoList items={items} render={(item)=>{
             return(
                 <div>{item}</div>
-            )
-        }}>
+            )}}>
         </TodoList>
     </Container>
     )
