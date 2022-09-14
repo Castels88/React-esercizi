@@ -34,10 +34,10 @@ export class App extends React.Component{
 render(){
     return (
     <Container title={"La mia App"}>
-        <Sum numbers={[1, 3, 5, 7]}/>
         <LanguageContext.Provider>
             <DisplayLanguage/>
         </LanguageContext.Provider>
+        <Sum/>
         <Welcome/>
         <Counter InitialValue={0} IncrementValue={1}/>
         <CounterDisplay NumeroIniziale={1} IncrementValue={1} Timeout={500}/>
