@@ -13,6 +13,7 @@ import { Login } from "./Login";
 import { Message } from "./Message";
 import { Name } from "./Name";
 import { SecondCounter } from "./SecondCounter";
+import { Sum } from "./Sum";
 import { ThirdCounter } from "./ThirdCounter";
 import { TodoList } from "./TodoList";
 import { UncontrolledLogin } from "./UncontrolledLogin";
@@ -33,6 +34,7 @@ export class App extends React.Component{
 render(){
     return (
     <Container title={"La mia App"}>
+        <Sum numbers={[1, 3, 5, 7]}/>
         <LanguageContext.Provider>
             <DisplayLanguage/>
         </LanguageContext.Provider>
