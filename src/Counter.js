@@ -1,28 +1,19 @@
-import React from "react";
-export class Counter extends React.Component{
-    constructor(props){
-        super(props)
-        this.state = {count: this.props.InitialValue};
-        setInterval(()=>{
-            this.setState((state)=>({
-                count: state.count + this.props.IncrementValue
-            }))
-            if(this.state.count === 10 ){
-                this.state.count = 1
-            }
-        },500)
-    }
-    
-    
-    
-    render(){
-        const CountStyle = {
-            backgroundColor: "beige",
-            color:"red",
-            width: "20px",
-            alignContent: "center"
-            
+
+import { useEffect, useState } from "react"
+
+export function Counter(){
+    const [count, setCount] = useState(0)
+    useEffect(()=>{
+        const interVal = setInterval(()=>{
+            setCount(c => c + 1)
+        },1000);
+        return () => {
+            clearInterval(interVal)
         }
-        return <div style={CountStyle} >{this.state.count}</div>
-    }
+    },[])
+    
+    
+    return(
+        <div>{`il numero del count is   ${count}`}</div>
+    )
 }
