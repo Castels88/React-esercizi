@@ -1,9 +1,14 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
 
 export function ClickCounter({inizialValue = 0}){
     const [counter, setCounter] = useState(inizialValue)
+    
+    useEffect((onCounterChange)=>{
+        console.log(`the counter value is: ${counter}`)
+    },[counter])
+    
     function IncrementValue(){
         setCounter(c => c + 1 )
     }
