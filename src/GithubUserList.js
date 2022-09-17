@@ -2,29 +2,29 @@ import { useState } from "react";
 import GithubUser from "./GithubUser";
 
 export function GithubUserList({users}) {
-  
-  const [user, setUser] = useState([]);
-  const [newUser, setNewUser] = useState('');
 
-  function handleInput({target}) {
-    setNewUser(target.value);
-  }
+    const [user, setUser] = useState([]);
+    const [newUser, setNewUser] = useState('');
 
-  function handleSubmit() {
-      setUser([...user, newUser]);
-  }
+    function handleInput({target}) {
+        setNewUser(target.value);
+    }
 
-  const userArray = user.map((user, index) => (
-      <div>
-        <ul>
-          <li key={index}>
-            <GithubUser username={user} />
-          </li>
-        </ul>
-      </div>
-  ))
+    function handleSubmit() {
+        setUser([...user, newUser]);
+    }
 
-  return (
+    const userArray = user.map((user, index) => (
+        <div>
+            <ul>
+            <li key={index}>
+                <GithubUser username={user} />
+            </li>
+            </ul>
+        </div>
+    ))
+
+return (
     <div>
 
         <div>
@@ -37,5 +37,5 @@ export function GithubUserList({users}) {
     </div>
 
     </div>
-  )
+)
 }
