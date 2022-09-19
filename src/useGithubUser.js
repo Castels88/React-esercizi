@@ -19,13 +19,13 @@ export function useGithubUser(username){
             setLoading(false)
         }
     }
-    useEffect(()=>{
-        fectGithubUser(username);
-    },[username])
+    
+    
     return {
         user,
         loading,
-        error
+        error,
+        onFetch: fectGithubUser
     }
 
     

@@ -1,8 +1,11 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { useGithubUser } from "./useGithubUser";
 
 export function GithubUser ({username}){
-    const {user, loading, error} = useGithubUser(username)
+    const {user, loading, error, onFetch} = useGithubUser(username)
+        useEffect(()=>{
+            onFetch(username)
+        },[username])
         return(
         <div>
             {loading && <p>Loading...</p> }
