@@ -1,22 +1,17 @@
 import { useEffect, useState } from 'react';
 import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
+import { Usecounter } from './UseCounter';
 
 export function ClickCounter({inizialValue = 0}){
-    const [counter, setCounter] = useState(inizialValue)
-    
-    useEffect((onCounterChange)=>{
-        console.log(`the counter value is: ${counter}`)
-    },[counter])
-    
-    function IncrementValue(){
-        setCounter(c => c + 1 )
-    }
+    const {counter, onIncrement, onDecrement, onReset} = Usecounter(inizialValue)
     return(
-        <Card border="primary" style={{width: "15rem"}}> 
+        <div border="primary" style={{width: "15rem"}}> 
             <h2>Click Counter</h2>
-            <h3>{counter}</h3>
-            <Button variant="success" style={{width: "15rem"}} onClick={IncrementValue}>Incrementa</Button>{''}
-        </Card>
+            <h3>counter is : {counter}</h3>
+            <div><button onClick={onIncrement}>Incrementa</button></div>
+            <div><button onClick={onDecrement}>Decrementa</button></div>
+            <div><button onClick={onReset}>Reset</button></div>
+        </div>
     )
 }

@@ -1,15 +1,11 @@
 import React, { Fragment } from "react";
 import { Container } from "./Container";
-import { Counter } from "./Counter"
-import { GithubUser } from "./GithubUser"
-import { GithubUserList } from "./GithubUserList";
-
+import { ClickCounter } from "./ClickCounter"
 export function App (){
 
     return (
     <Container title={"La mia App"}>
-        <Counter/>
-        <GithubUserList username="Castels88"/>
+        <ClickCounter/>
     </Container>
     )
 }
