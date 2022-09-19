@@ -1,12 +1,11 @@
 import React, { Fragment } from "react";
-import { Container } from "./Container";
-import { Login } from "./Login"
+import { GithubUser } from "./GithubUser"
 export function App (){
 
     return (
-    <Container title={"La mia App"}>
-        <Login/>
-    </Container>
+        <div>
+            <GithubUser username="Castels88"/>
+        </div>
     )
 }
 
