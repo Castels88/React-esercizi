@@ -1,10 +1,10 @@
 import React, { Fragment } from "react";
-import { GithubUser } from "./GithubUser"
+import { ClickCounter } from "./ClickCounter"
 export function App (){
 
     return (
         <div>
-            <GithubUser username="Castels88"/>
+            <ClickCounter/>
         </div>
     )
 }
