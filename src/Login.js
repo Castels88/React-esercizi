@@ -1,28 +1,21 @@
 import { useState } from "react"
 import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
+import { CustomHookLogin } from "./CustomHookLogin";
 
 export function Login(){
-    const [data, setData] = useState({
+    const {username, password, remember, inputChange, onLogin} = CustomHookLogin({
         username: "",
         password: "",
         remember: false,
     })
-    function handleInputChange(event){
-        const {name, type, value, checked} = event.target
-        setData((data)=>{
-            return{
-                ...data,
-                [name]: type === "checkbox" ? checked : value
-            }
-        })
-    }
     
     return(
         <Form>
-            <Form.Control onChange={handleInputChange} type="text" name="username" value={data.username} placeholder={"username"} />
-            <Form.Control onChange={handleInputChange} type="password" name="password" value={data.password} placeholder={"password"} />
-            <Form.Check onChange={handleInputChange} type="checkbox" name="remember" checked={data.remember} />
+            <Form.Control onChange={inputChange} type="text" name="username" value={username} placeholder={"username"} />
+            <Form.Control onChange={inputChange} type="password" name="password" value={password} placeholder={"password"} />
+            <Form.Check onChange={inputChange} type="checkbox" name="remember" checked={remember} />
+            <button onClick={onLogin}>Submit</button>
         </Form>
     )
 }
