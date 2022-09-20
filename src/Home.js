@@ -1,25 +1,73 @@
-import { useEffect, useState } from "react"
+import React from "react";
+import { useEffect } from "react";
+import { useState } from "react";
+import Even from "./Even";
+import Odd from "./Odd";
 
 export function Home (){
-    const [data, setData] = useState(null)
-    useEffect(()=>{
-        fetch(` http://numbersapi.com/random/math`)
-        .then(response => {
+    const [data, setData] = useState('')
+    const [counter, setCounter] = useState(0)
+    const [frase, setFrase] = useState('')
+    const [item, setItem] = useState([])
+    const [listodd, setListOdd] = useState(false)
+    const [listeven, setListEven] = useState(false)
+    const [dispari, setDispari] = useState([])
+    const [pari, setPari] = useState([])
+
+
+    useEffect(() => {
+        fetch(`http://numbersapi.com/random/math`)
+        .then((response) => {
             return response.text()
         })
-        .then(text =>{
-            console.log(text)
-            setData(text)
-        })
-    },[])
-    function handleText(){
 
+        .then((data) => {
+            setData(data)
+            setFrase(data)
+            item.push(data)
+            console.log(data)
+
+            let DATA = data.substring(0, 4)
+            if (DATA % 2 === 0) {
+                return pari.push(data)
+            } else {
+                return dispari.push(data)
+            }
+
+        })
+    },[counter])
+
+
+    const handleClick = () => {
+       setCounter((c => c + 1))
+    };
+
+    const handleListOdd = () => {
+        setListOdd(!listodd)
     }
-    return(
+
+    const handleListEven = () => {
+        setListEven(!listeven)
+    }
+
+    return (
+
         <div>
-            <button onClick={handleText}>Home</button>
-            <button >Odd</button>
-            <button >Even</button>
+            <p>{frase}</p>
+            <button onClick={handleClick}>Click</button>
+
+            <ul>
+                {item.map((frase, index) => {
+                    return <li key={index}>{frase}</li>
+                })}
+            </ul>
+
+            <button onClick={handleListOdd}>Odd</button>
+            {listodd && <Odd frase={dispari} />}
+
+            <button onClick={handleListEven}>Even</button>
+            {listeven && <Even frase={pari} />}
         </div>
-    )
+     );
 }
+ 
