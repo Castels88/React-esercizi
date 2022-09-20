@@ -29,9 +29,9 @@ export function Home (){
 
             let DATA = data.substring(0, 4)
             if (DATA % 2 === 0) {
-                return pari.push(data)
+                return setPari((array)=> [...pari, data])
             } else {
-                return dispari.push(data)
+                return setDispari((array)=> [...dispari,data])
             }
 
         })
