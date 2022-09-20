@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react';
 import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
 import { Usecounter } from './UseCounter';
+import React from 'react';
 
 export function ClickCounter({inizialValue = 0}){
     const {counter, onIncrement, onDecrement, onReset} = Usecounter(inizialValue)

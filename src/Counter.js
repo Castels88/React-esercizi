@@ -1,5 +1,6 @@
-
+import React from "react";
 import { useEffect, useState } from "react"
+import {Link} from "react-router-dom"
 
 export function Counter(){
     const [count, setCount] = useState(0)
@@ -14,6 +15,8 @@ export function Counter(){
     
     
     return(
-        <div>{`il numero del count is   ${count}`}</div>
+        <div>{`il numero del count is ${count}`}
+        <Link to="/"> <div>back</div> </Link>
+        </div>
     )
 }
