@@ -2,14 +2,16 @@ import React from "react";
 const Even = ({frase}) => {
     return ( 
         <div>
-           <ul>
+            <h5>Even.</h5>
+            <ul>
                 {frase.map((c, index) => {
                     return <li key={index}>{c}</li>
                 })}
-           </ul>
+                <button>Delete</button>
+            </ul>
         </div>
-         );
+        );
     }
 
- 
+
 export default Even;

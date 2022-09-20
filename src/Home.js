@@ -15,7 +15,7 @@ export function Home (){
     const [pari, setPari] = useState([])
 
 
-    useEffect(() => {
+    function HandleButton(){
         fetch(`http://numbersapi.com/random/math`)
         .then((response) => {
             return response.text()
@@ -23,7 +23,7 @@ export function Home (){
 
         .then((data) => {
             setData(data)
-            setFrase(data)
+            // setFrase(data)
             item.push(data)
             console.log(data)
 
@@ -35,12 +35,7 @@ export function Home (){
             }
 
         })
-    },[counter])
-
-
-    const handleClick = () => {
-       setCounter((c => c + 1))
-    };
+    }
 
     const handleListOdd = () => {
         setListOdd(!listodd)
@@ -54,7 +49,7 @@ export function Home (){
 
         <div>
             <p>{frase}</p>
-            <button onClick={handleClick}>Click</button>
+            <button onClick={HandleButton}>Click</button>
 
             <ul>
                 {item.map((frase, index) => {
@@ -68,6 +63,5 @@ export function Home (){
             <button onClick={handleListEven}>Even</button>
             {listeven && <Even frase={pari} />}
         </div>
-     );
+    );
 }
- 
