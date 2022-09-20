@@ -1,9 +1,15 @@
 import React from "react"
-import { Age } from "./Age"
+import {useParams, Link} from "react-router-dom"
 
 
-export function Welcome ({name= "John", age= 33}){
+
+
+export function Welcome (){
+    const {name = "World!"} = useParams()
 return(
-    <h2>Hello i'm {name}, i have {age} years old</h2>
+    <div>
+        <h3>Hello {name}</h3>
+        <Link to="/login">Login to the App</Link>
+    </div>
 )
 }
