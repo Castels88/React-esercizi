@@ -9,7 +9,7 @@ export function Welcome (){
 return(
     <div>
         <h3>Hello {name}</h3>
-        <Link to="/login">Login to the App</Link>
+        <Link to="/">Login to the App</Link>
     </div>
 )
 }
