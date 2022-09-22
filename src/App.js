@@ -1,11 +1,11 @@
 import React, { Fragment } from "react";
-import {Home} from "./Home"
+import { EsercizioUncontrolled } from "./EsercizioUncontrolled";
 export function App (){
     
     
     return (
         <div>
-            <Home/>
+            <EsercizioUncontrolled/>
         </div>
     )
 }
