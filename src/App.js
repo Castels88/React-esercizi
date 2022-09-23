@@ -2,8 +2,9 @@ import React from "react";
 import {Routes, Route} from "react-router-dom"
 import {Container} from "./Container"
 import {Welcome} from "./Welcome"
-import {ClickCounter} from "./ClickCounter"
 import { Counter } from "./Counter";
+import { Login } from "./Login";
+
 export function App (){
     return (
         <Container title={
@@ -12,8 +13,9 @@ export function App (){
             </div>
         }>
             <Routes>
-                <Route path="/" element={<Welcome/>}/>
+                <Route path="/:name" element={<Welcome/>}/>
                 <Route path="/counter" element={<Counter/>}/>
+                <Route path="/login" element={<Login/>}/>
             </Routes>
             
         </Container>

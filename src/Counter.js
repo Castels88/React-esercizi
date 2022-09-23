@@ -16,7 +16,7 @@ export function Counter(){
     
     return(
         <div>{`il numero del count is ${count}`}
-        <Link to="/"> <div>back</div> </Link>
+        <Link to="/"> <div>back</div></Link>
         </div>
     )
 }
