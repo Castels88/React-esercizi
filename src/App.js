@@ -1,27 +1,37 @@
-import React from "react";
-import {Routes, Route} from "react-router-dom"
-import {Container} from "./Container"
-import {Welcome} from "./Welcome"
-import { Counter } from "./Counter";
-import { Login } from "./Login";
-
+import React, { useEffect, useState } from "react";
+import Axios from "axios"
+import { PredictTheAge } from "./PredictTheAge";
+import { Excuse } from "./Excuse";
+import { MapList } from "./MapList";
+import { EserciziArrayMethod } from "./EserciziArrayMethod"
+// vediamo come si usa axios per fetchare dati da API
+// noteremo che la API viene renderizzata all'infinito per evitare cio bisogna mettere 
+// il fetch dentro uno use effect in modo che venga mostrato solo quando viene montato
+// e adesso spuntera uno e basta 
+// per farsi che la frase spunti al click ci basta muovere il fecth dentro una funzione
+// handleButton e in questo modo al click spuntera sempre una nuovo frase
 export function App (){
+    const [frase, setFrase] = useState("")
+    useEffect(()=>{
+        Axios.get(`https://catfact.ninja/fact`).then((response)=> {
+        setFrase(response.data.fact)
+    })
+    },[])
+    function handleButton(){
+        Axios.get(`https://catfact.ninja/fact`).then((response)=> {
+        setFrase(response.data.fact)
+    })
+    }
     return (
-        <Container title={
-            <div>
-                <h1>My App </h1>
-            </div>
-        }>
-            <Routes>
-                <Route path="/:name" element={<Welcome/>}/>
-                <Route path="/counter" element={<Counter/>}/>
-                <Route path="/login" element={<Login/>}/>
-            </Routes>
-            
-        </Container>
-    )
+        <div>
+            <button onClick={handleButton}>Generate Cat Fact </button>
+            <p>{frase}</p>
+            <PredictTheAge/>
+            <Excuse/>
+            <MapList/>
+            <EserciziArrayMethod/>
+        </div>
+        )
 }
-// React Router - 02
-// Add a new Route to the /counter path that 
-// renders the Counter component from useState 01.
+
 
