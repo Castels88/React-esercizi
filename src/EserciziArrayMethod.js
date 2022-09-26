@@ -1,5 +1,7 @@
 import React from "react";
 export function EserciziArrayMethod(){
+
+    
     const characters = [
         {
             name: 'Luke Skywalker',
@@ -62,7 +64,14 @@ export function EserciziArrayMethod(){
             {characters.reduce((acc, cur)=>{
                 return acc + cur.name.length
             },0)}
+            <br />
+            <div>Get the total number of characters by eye color (hint. a map of eye color to count)</div>
+            {characters.map(value => value.eye_color).reduce((acc,cur)=> acc + cur.length ,0)
+            }
+            <br />
+            <div>Get characters with mass greater than 100</div>
+            <p>per questi 2 esercizi li ho svolti in esercizi con manny file</p>
+            <br />
         </div>
-
     )
 }
