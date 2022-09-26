@@ -4,6 +4,7 @@ import { PredictTheAge } from "./PredictTheAge";
 import { Excuse } from "./Excuse";
 import { MapList } from "./MapList";
 import { EserciziArrayMethod } from "./EserciziArrayMethod"
+import { TableApi } from "./TableApi";
 // vediamo come si usa axios per fetchare dati da API
 // noteremo che la API viene renderizzata all'infinito per evitare cio bisogna mettere 
 // il fetch dentro uno use effect in modo che venga mostrato solo quando viene montato
@@ -30,6 +31,7 @@ export function App (){
             <Excuse/>
             <MapList/>
             <EserciziArrayMethod/>
+            <TableApi/>
         </div>
         )
 }
