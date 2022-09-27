@@ -11,22 +11,19 @@ export function App (){
         <Container title={
             <div>
                 <h1>My App </h1>
-                <div>
-                    <Link to="/counter">Counter</Link> | <Link to="/login">Login</Link> | 
-                    <Link to="/message">Message</Link>
-                </div>
+                
             </div>
         }>
             <Routes>
                 <Route path="/" element={<Welcome/>}/>
-                <Route path="/counter" element={<Counter/>}/>
-                <Route path="/:username" element={<GithubUser username="Castels88"/>}/>
-                <Route path="/login" element={<Login/>}/>
-                <Route path="/message" element={<Message/>}/>
+                <Route path="*" element={<div>
+                    <p>not found</p>
+                        <Link to="/">go home</Link>
+                </div>}/>
             </Routes>
             
         </Container>
     )
 }
-// React Router - 04
-// Add three Links within the main App component and use them to navigate to all three routes.
+// React Router - 05
+// Add a Not Found route that renders when a user navigates to a path that does not exist.
