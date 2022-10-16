@@ -6,7 +6,6 @@ import { useEffect } from 'react'
 export function Card(){
     const [value, setValue]=useState([])
     const [search,setSearch]=useState("")
-    const [view,setView]=useState(true)
     useEffect(()=>{
         Axios.get(`https://api.punkapi.com/v2/beers`).then((response)=>{
             setValue(response.data)
