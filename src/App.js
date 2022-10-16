@@ -1,28 +1,11 @@
 import React from "react";
-import {Routes, Route, Link} from "react-router-dom"
-import {Container} from "./Container"
-import {Welcome} from "./Welcome"
-import {Message} from "./Message"
-import { Counter } from "./Counter";
-import { GithubUser } from "./GithubUser";
-import { Login } from "./Login"
+import { Card } from "./Card";
 export function App (){
     return (
-        <Container title={
-            <div>
-                <h1>My App </h1>
-                
-            </div>
-        }>
-            <Routes>
-                <Route path="/" element={<Welcome/>}/>
-                <Route path="*" element={<div>
-                    <p>not found</p>
-                        <Link to="/">go home</Link>
-                </div>}/>
-            </Routes>
-            
-        </Container>
+        <div>
+            <Card/>
+        </div>
+      
     )
 }
 // React Router - 05
